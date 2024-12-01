@@ -1,5 +1,4 @@
 from ansible.plugins.inventory import BaseInventoryPlugin
-from ansible_collections.awx.awx.plugins.lookup.schedule_rruleset import DOCUMENTATION, EXAMPLES
 
 DOCUMENTATION = r"""
     name: example
