@@ -1,8 +1,8 @@
 ---
 - name: Hello world playbook
-  gather_facts: no
+  gather_facts: false
   hosts: localhost
   tasks:
     - name: Print hello world
-      debug:
+      ansible.builtin.debug:
         msg: "Hello world!"
