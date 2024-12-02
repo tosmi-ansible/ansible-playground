@@ -24,8 +24,11 @@ class InventoryModule(BaseInventoryPlugin):
         inventory.add_host('example-host2')
         inventory.add_host('example-host3')
 
-        inventory.add_group('example-group')
-        inventory.add_child('example-group', 'example-host1')
-        inventory.add_child('example-group','example-host2')
+        inventory.add_group('Group_1')
+        inventory.add_group('Group_2')
+        inventory.add_group('Group_3')
 
+        inventory.add_child('Group_1', 'example-host1')
+        inventory.add_child('Group_2', 'example-host2')
+        inventory.add_child('Group_3', 'example-host3')
 
