@@ -95,7 +95,6 @@
         <option value="$PROJECT_DIR$" />
       </list>
     </option>
-    <option name="orchideLocationsChanged" value="true" />
     <option name="orchidePlaybookLocations">
       <list>
         <option value="$PROJECT_DIR$/playbooks" />
