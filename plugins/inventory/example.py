@@ -24,11 +24,22 @@ class InventoryModule(BaseInventoryPlugin):
         super(InventoryModule, self).parse(inventory, loader, path)
         self.set_options()
 
-        self.inventory.add_host('example-host1',)
-        self.inventory.add_host('example-host2',)
+        self.inventory.add_host('example-host1')
+        self.inventory.add_host('example-host11')
+        self.inventory.add_host('example-host12')
+        self.inventory.add_host('example-host13')
+        self.inventory.add_host('example-host14')
+        self.inventory.add_host('example-host2')
         self.inventory.add_host('example-host3')
+        self.inventory.add_host('example-host4')
 
         group = self.inventory.add_group('Group_1')
+        self.inventory.set_variable(group, 'ansible_connection', 'local')
+
+        group = self.inventory.add_group('Group_1_nonprod')
+        self.inventory.set_variable(group, 'ansible_connection', 'local')
+
+        group = self.inventory.add_group('Group_1_prod')
         self.inventory.set_variable(group, 'ansible_connection', 'local')
 
 
@@ -39,6 +50,14 @@ class InventoryModule(BaseInventoryPlugin):
         self.inventory.set_variable(group, 'ansible_connection', 'local')
 
         self.inventory.add_child('Group_1', 'example-host1')
+
+
+        self.inventory.add_child('Group_1_nonprod', 'example-host11')
+        self.inventory.add_child('Group_1_nonprod', 'example-host12')
+
+        self.inventory.add_child('Group_1_prod', 'example-host13')
+        self.inventory.add_child('Group_1_prod', 'example-host14')
+
         self.inventory.add_child('Group_2', 'example-host2')
         self.inventory.add_child('Group_3', 'example-host3')
 

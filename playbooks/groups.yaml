@@ -21,11 +21,45 @@
                    host='gateway01.lan.stderr.at',
                    verify_ssl=false)  }}
 
-    - ansible.builtin.debug: var=__groups
+    - name: Filter relevant groups
+      ansible.builtin.set_fact:
+        __inventory_relevant_groups: |-
+          {{ __groups | community.general.json_query('[?summary_fields.inventory.name==`Test inventory`].name') }}
 
-    - ansible.builtin.debug:
+    - name: Print all groups found
+      ansible.builtin.debug:
+        var: __groups
+
+    - name: Print group names
+      ansible.builtin.debug:
         msg: "{{ __groups | map(attribute='name') }}"
 
-    - name: Filter
+    - name: Print relevant groups
       ansible.builtin.debug:
-        msg: "{{ __groups | community.general.json_query('[?summary_fields.inventory.name==`Test inventory`].name') }}"
+        msg: "{{ __inventory_relevant_groups }}"
+        
+    - name: Create job template
+      ansible.controller.job_template:
+        controller_host: gateway01.lan.stderr.at
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+        name: "Group selector demo"
+        description: "This is a job template with a survey"
+        organization: "Test Organization"
+        job_type: "run"
+        inventory: "Test inventory"
+        project: "Playground"
+        playbook: "playbooks/print-selected-group.yml"
+        survey_enabled: true
+        survey_spec:
+          name: "Inventory group"
+          description: ""
+          spec:
+            - question_name: "inventory_group"
+              question_description: "Select group from inventory?"
+              required: true
+              type: "multiplechoice"
+              variable: "inventory_selected_group"
+              choices:
+                "{{ __inventory_relevant_groups }}"
