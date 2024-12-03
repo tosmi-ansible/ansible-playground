@@ -1,1 +1,4 @@
 /.direnv/
+/ansible-navigator.log
+/plugins/inventory/__pycache__/
+/playbooks/*.json
