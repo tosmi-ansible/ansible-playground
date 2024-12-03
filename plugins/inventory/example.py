@@ -20,15 +20,25 @@ class InventoryModule(BaseInventoryPlugin):
         return path.endswith(('example.yml', 'example.yaml'))
 
     def parse(self, inventory, loader, path, cache=True):
-        inventory.add_host('example-host1')
-        inventory.add_host('example-host2')
-        inventory.add_host('example-host3')
 
-        inventory.add_group('Group_1')
-        inventory.add_group('Group_2')
-        inventory.add_group('Group_3')
+        super(InventoryModule, self).parse(inventory, loader, path)
+        self.set_options()
 
-        inventory.add_child('Group_1', 'example-host1')
-        inventory.add_child('Group_2', 'example-host2')
-        inventory.add_child('Group_3', 'example-host3')
+        self.inventory.add_host('example-host1',)
+        self.inventory.add_host('example-host2',)
+        self.inventory.add_host('example-host3')
+
+        group = self.inventory.add_group('Group_1')
+        self.inventory.set_variable(group, 'ansible_connection', 'local')
+
+
+        group = self.inventory.add_group('Group_2')
+        self.inventory.set_variable(group, 'ansible_connection', 'local')
+
+        group = self.inventory.add_group('Group_3')
+        self.inventory.set_variable(group, 'ansible_connection', 'local')
+
+        self.inventory.add_child('Group_1', 'example-host1')
+        self.inventory.add_child('Group_2', 'example-host2')
+        self.inventory.add_child('Group_3', 'example-host3')
 
