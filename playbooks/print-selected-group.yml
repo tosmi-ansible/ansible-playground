@@ -1,0 +1,16 @@
+---
+- name: Hello world playbook
+  gather_facts: false
+  hosts: localhost
+  tasks:
+    - name: Print hello world
+      ansible.builtin.debug:
+        msg: "You selected group: {{ inventory_selected_group | default('None') }}!"
+
+- name: Run debug on selected group
+  gather_facts: no
+  hosts: "{{ inventory_selected_group | default('all') }}"
+  tasks:
+    - name: Print debug message
+      ansible.builtin.debug:
+        msg: "Running on {{ inventory_hostname }} which is part of the groups {{ group_names }}"
