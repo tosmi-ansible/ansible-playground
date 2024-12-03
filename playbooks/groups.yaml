@@ -1,0 +1,31 @@
+- name: Query controller groups
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Query all groups in the controller
+      ansible.builtin.debug:
+        msg: |-
+          Groups: {{ query('ansible.controller.controller_api', 'groups',
+                           username=controller_username,
+                           password=controller_password,
+                           host='gateway01.lan.stderr.at',
+                           verify_ssl=false) }}
+
+    - name: Get the list of groups
+      ansible.builtin.set_fact:
+        __groups: |-
+          {{ query('ansible.controller.controller_api', 'groups',
+                   query_params={ 'name__startswith' : 'Group', },
+                   username=controller_username,
+                   password=controller_password,
+                   host='gateway01.lan.stderr.at',
+                   verify_ssl=false)  }}
+
+    - ansible.builtin.debug: var=__groups
+
+    - ansible.builtin.debug:
+        msg: "{{ __groups | map(attribute='name') }}"
+
+    - name: Filter
+      ansible.builtin.debug:
+        msg: "{{ __groups | community.general.json_query('[?summary_fields.inventory.name==`Test inventory`].name') }}"
