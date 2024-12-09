@@ -37,7 +37,7 @@
     - name: Print relevant groups
       ansible.builtin.debug:
         msg: "{{ __inventory_relevant_groups }}"
-        
+
     - name: Create job template
       ansible.controller.job_template:
         controller_host: gateway01.lan.stderr.at

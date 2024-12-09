@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="OrchidESettings">
+    <option name="codeCompletionBooleanSet">
+      <list>
+        <option value="true" />
+        <option value="false" />
+      </list>
+    </option>
     <option name="enabledCollections">
       <map>
+        <entry key="amazon">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="aws">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="aws" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="amazon" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
         <entry key="ansible">
           <value>
             <OrchideSettingsCollectionsConfig>
@@ -36,6 +66,18 @@
                     <value>
                       <OrchideSettingsCollection>
                         <option name="collection" value="posix" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="scm">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="scm" />
                         <option name="options">
                           <OrchideSettingsCollectionsConfigOptions>
                             <option name="completionType" value="FQCN_ONLY" />
@@ -112,6 +154,18 @@
                       </OrchideSettingsCollection>
                     </value>
                   </entry>
+                  <entry key="digitalocean">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="digitalocean" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
                   <entry key="dns">
                     <value>
                       <OrchideSettingsCollection>
@@ -139,1020 +193,72 @@
                   <entry key="general">
                     <value>
                       <OrchideSettingsCollection>
-                        <option name="categoryGroups">
-                          <map>
-                            <entry key="cloud">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="alicloud">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="alicloud" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="atomic">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="atomic" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="centurylink">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="centurylink" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="dimensiondata">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="dimensiondata" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="heroku">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="heroku" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="huawei">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="huawei" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="linode">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="linode" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="lxc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="lxc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="lxd">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="lxd" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="memset">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="memset" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="misc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="misc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="oneandone">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="oneandone" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="online">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="online" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="opennebula">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="opennebula" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="oracle">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="oracle" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="ovh">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="ovh" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="packet">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="packet" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="profitbricks">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="profitbricks" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="pubnub">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="pubnub" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="rackspace">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="rackspace" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="scaleway">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="scaleway" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="smartos">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="smartos" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="softlayer">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="softlayer" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="spotinst">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="spotinst" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="univention">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="univention" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="webfaction">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="webfaction" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="xenserver">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="xenserver" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="cloud" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="clustering">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="consul">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="consul" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="nomad">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="nomad" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="clustering" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="database">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="aerospike">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="aerospike" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="influxdb">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="influxdb" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="misc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="misc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="mssql">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="mssql" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="saphana">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="saphana" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="vertica">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="vertica" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="database" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="files">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="name" value="files" />
-                                  <option name="options">
-                                    <OrchideSettingsCollectionsConfigOptions>
-                                      <option name="completionType" value="FQCN_ONLY" />
-                                    </OrchideSettingsCollectionsConfigOptions>
-                                  </option>
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="identity">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="ipa">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="ipa" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="keycloak">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="keycloak" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="opendj">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="opendj" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="identity" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="monitoring">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="datadog">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="datadog" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="sensu">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="sensu" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="monitoring" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="net tools">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="infinity">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="infinity" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="ldap">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="ldap" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="pritunl">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="pritunl" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="net tools" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="notification">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="name" value="notification" />
-                                  <option name="options">
-                                    <OrchideSettingsCollectionsConfigOptions>
-                                      <option name="completionType" value="FQCN_ONLY" />
-                                    </OrchideSettingsCollectionsConfigOptions>
-                                  </option>
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="packaging">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="language">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="language" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="os">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="os" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="packaging" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="remote management">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="cobbler">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="cobbler" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="hpilo">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="hpilo" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="imc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="imc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="ipmi">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="ipmi" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="lenovoxcc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="lenovoxcc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="lxca">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="lxca" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="manageiq">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="manageiq" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="oneview">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="oneview" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="redfish">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="redfish" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="stacki">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="stacki" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="remote management" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="source control">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="bitbucket">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="bitbucket" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="github">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="github" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="gitlab">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="gitlab" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="source control" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="storage">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="emc">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="emc" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="hpe3par">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="hpe3par" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="ibm">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="ibm" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="vexata">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="vexata" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="zfs">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="zfs" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="storage" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="system">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="name" value="system" />
-                                  <option name="options">
-                                    <OrchideSettingsCollectionsConfigOptions>
-                                      <option name="completionType" value="FQCN_ONLY" />
-                                    </OrchideSettingsCollectionsConfigOptions>
-                                  </option>
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                            <entry key="web infrastructure">
-                              <value>
-                                <OrchideSettingsCollectionCategoryGroup>
-                                  <option name="categories">
-                                    <map>
-                                      <entry key="general">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="general" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                      <entry key="sophos_utm">
-                                        <value>
-                                          <OrchideSettingsCollectionCategory>
-                                            <option name="name" value="sophos_utm" />
-                                            <option name="options">
-                                              <OrchideSettingsCollectionsConfigOptions>
-                                                <option name="completionType" value="FQCN_ONLY" />
-                                              </OrchideSettingsCollectionsConfigOptions>
-                                            </option>
-                                          </OrchideSettingsCollectionCategory>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="name" value="web infrastructure" />
-                                </OrchideSettingsCollectionCategoryGroup>
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
                         <option name="collection" value="general" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="google">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="google" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="grafana">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="grafana" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="kubernetes">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="kubernetes" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="kubevirt">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="kubevirt" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="libvirt">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="libvirt" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
                       </OrchideSettingsCollection>
                     </value>
                   </entry>
@@ -1160,6 +266,18 @@
                     <value>
                       <OrchideSettingsCollection>
                         <option name="collection" value="mysql" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="network">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="network" />
                         <option name="options">
                           <OrchideSettingsCollectionsConfigOptions>
                             <option name="completionType" value="FQCN_ONLY" />
@@ -1275,7 +393,318 @@
             </OrchideSettingsCollectionsConfig>
           </value>
         </entry>
+        <entry key="grafana">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="grafana">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="grafana" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="grafana" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="hetzner">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="hcloud">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="hcloud" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="hetzner" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="infoblox">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="nios_modules">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="nios_modules" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="infoblox" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="kubernetes">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="core">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="core" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="kubernetes" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="middleware_automation">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="keycloak">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="keycloak" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="middleware_automation" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="netbox">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="netbox">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="netbox" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="netbox" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="openvswitch">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="openvswitch">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="openvswitch" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="openvswitch" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="ovirt">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="ovirt">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="ovirt" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="ovirt" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="servicenow">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="itsm">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="itsm" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                  <entry key="servicenow">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="servicenow" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="servicenow" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="theforeman">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="foreman">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="foreman" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="theforeman" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="vmware">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="vmware_rest">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="vmware_rest" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="vmware" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
+        <entry key="vultr">
+          <value>
+            <OrchideSettingsCollectionsConfig>
+              <option name="collections">
+                <map>
+                  <entry key="cloud">
+                    <value>
+                      <OrchideSettingsCollection>
+                        <option name="collection" value="cloud" />
+                        <option name="options">
+                          <OrchideSettingsCollectionsConfigOptions>
+                            <option name="completionType" value="FQCN_ONLY" />
+                          </OrchideSettingsCollectionsConfigOptions>
+                        </option>
+                      </OrchideSettingsCollection>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="enabled" value="YES" />
+              <option name="namespace" value="vultr" />
+            </OrchideSettingsCollectionsConfig>
+          </value>
+        </entry>
       </map>
     </option>
+    <option name="enabledFoldingElements">
+      <map>
+        <entry key="Block and Roles" value="false" />
+        <entry key="Keywords" value="false" />
+        <entry key="Module Arguments" value="false" />
+        <entry key="Modules" value="false" />
+        <entry key="Tasks" value="true" />
+      </map>
+    </option>
+    <option name="newFileActionAnsibleDefaultFileExtension" value="yaml" />
+    <option name="orchideAnsibleConfigFileLocation" value="/home/pinhead/.ansible.cfg" />
   </component>
 </project>

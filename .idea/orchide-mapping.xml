@@ -92,7 +92,7 @@
     </option>
     <option name="orchideInventoryLocations">
       <list>
-        <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/inventory" />
       </list>
     </option>
     <option name="orchidePlaybookLocations">
