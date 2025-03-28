@@ -32,8 +32,8 @@ class InventoryModule(BaseInventoryPlugin):
 
         super(InventoryModule, self).parse(inventory, loader, path, cache)
 
-        username = os.environ.get('INVENTORY_USERNAME')
-        password = os.environ.get('INVENTORY_PASSWORD')
+        username = os.environ.get('EXAMPLE_INVENTORY_USERNAME')
+        password = os.environ.get('EXAMPLE_INVENTORY_PASSWORD')
 
         config_data = self._read_config_data(path)
         config_server = config_data.get('server')
