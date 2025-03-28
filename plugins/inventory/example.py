@@ -1,4 +1,7 @@
+import os
+
 from ansible.plugins.inventory import BaseInventoryPlugin
+from ansible.utils.display import Display
 
 DOCUMENTATION = r"""
     name: example
@@ -12,17 +15,29 @@ EXAMPLES = r"""
     # this inventory returns an example group with two hosts
 """
 
+display = Display()
 
 class InventoryModule(BaseInventoryPlugin):
     NAME = 'example'
+
+    def __init__(self):
+        super(InventoryModule, self).__init__()
+        self.server = None
 
     def verify_file(self, path):
         return path.endswith(('example.yml', 'example.yaml'))
 
     def parse(self, inventory, loader, path, cache=True):
+        display.warning("Entering parse function")
+        super(InventoryModule, self).parse(inventory, loader, path, cache)
+        display.warning(path)
+        config_data = self._read_config_data(path)
 
-        super(InventoryModule, self).parse(inventory, loader, path)
-        self.set_options()
+        display.warning("Username from environment: {}".format(os.environ.get('INVENTORY_USERNAME')))
+        display.warning("Password from environment: {}".format(os.environ.get('INVENTORY_PASSWORD')))
+
+        display.warning("Server setting from inventory config: {}".format(config_data.get('server')))
+
 
         self.inventory.add_host('example-host1')
         self.inventory.add_host('example-host11')
@@ -41,7 +56,6 @@ class InventoryModule(BaseInventoryPlugin):
 
         group = self.inventory.add_group('Group_1_prod')
         self.inventory.set_variable(group, 'ansible_connection', 'local')
-
 
         group = self.inventory.add_group('Group_2')
         self.inventory.set_variable(group, 'ansible_connection', 'local')
