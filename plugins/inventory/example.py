@@ -38,12 +38,10 @@ class InventoryModule(BaseInventoryPlugin):
         config_data = self._read_config_data(path)
         config_server = config_data.get('server')
 
+        display.warning(f'Username from environment: { username }')
+        display.warning(f'Password from environment: { password }')
 
-        display.warning('Username from environment: { username }')
-        display.warning('Username from environment: { password }')
-
-
-        display.warning('Server setting from inventory config: { config_server}')
+        display.warning(f'Server setting from inventory config: { config_server}')
 
         self.inventory.add_host('example-host1')
         self.inventory.add_host('example-host11')
