@@ -29,15 +29,21 @@ class InventoryModule(BaseInventoryPlugin):
 
     def parse(self, inventory, loader, path, cache=True):
         display.warning("Entering parse function")
+
         super(InventoryModule, self).parse(inventory, loader, path, cache)
-        display.warning(path)
+
+        username = os.environ.get('INVENTORY_USERNAME')
+        password = os.environ.get('INVENTORY_PASSWORD')
+
         config_data = self._read_config_data(path)
+        config_server = config_data.get('server')
 
-        display.warning("Username from environment: {}".format(os.environ.get('INVENTORY_USERNAME')))
-        display.warning("Password from environment: {}".format(os.environ.get('INVENTORY_PASSWORD')))
 
-        display.warning("Server setting from inventory config: {}".format(config_data.get('server')))
+        display.warning('Username from environment: { username }')
+        display.warning('Username from environment: { password }')
 
+
+        display.warning('Server setting from inventory config: { config_server}')
 
         self.inventory.add_host('example-host1')
         self.inventory.add_host('example-host11')
@@ -50,6 +56,9 @@ class InventoryModule(BaseInventoryPlugin):
 
         group = self.inventory.add_group('Group_1')
         self.inventory.set_variable(group, 'ansible_connection', 'local')
+        self.inventory.set_variable(group, 'inventory_username', username)
+        self.inventory.set_variable(group, 'inventory_password', password)
+        self.inventory.set_variable(group, 'config_server', config_server)
 
         group = self.inventory.add_group('Group_1_nonprod')
         self.inventory.set_variable(group, 'ansible_connection', 'local')
