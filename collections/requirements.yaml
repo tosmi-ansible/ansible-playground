@@ -1,3 +1,3 @@
 collections:
   - name: community.general
-    source: https://aap.apps.hub.aws.tntinfra.net/pulp_ansible/galaxy/community/
+    source: https://aap.apps.hub.aws.tntinfra.net/api/galaxy/content/community/
