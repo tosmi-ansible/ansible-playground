@@ -1,0 +1,21 @@
+- name: Play with convertion
+  hosts: localhost
+  gather_facts: no
+  vars:
+    job_timeout: 3600
+
+  tasks:
+    - name: Execute job
+      ansible.builtin.shell:
+        cmd: sleep 30
+      async: 3600
+      poll: 0
+      register: sqlplus_command
+
+    - name: Wait {{ job_timeout }} seconds for the job to finish
+      ansible.builtin.async_status:
+        jid: "{{ sqlplus_command.ansible_job_id }}"
+      register: job_result
+      until: job_result.finished
+      retries: "{{ (job_timeout / 10) | int }}"
+      delay: 10

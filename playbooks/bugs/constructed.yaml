@@ -1,0 +1,33 @@
+- name: Create constracted in with with same source in multiple orgs
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create inventory in Tenant-1 Org
+      ansible.controller.inventory:
+        name: "The Inventory"
+        organization: "Tenant-1"
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+
+    - name: Create inventory in Tenant-2 Org
+      ansible.controller.inventory:
+        name: "The Inventory"
+        organization: "Tenant-2"
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+
+    - name: Create a constructed inventory
+      ansible.controller.inventory:
+        name: "Constructed Inventory 1"
+        organization: "Tenant-1"
+        kind: "constructed"
+        input_inventories:
+          - "The Inventory"
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false

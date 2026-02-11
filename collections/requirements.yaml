@@ -4,3 +4,6 @@ collections:
 
   - name: ansible.windows
     source: https://aap.apps.hub.aws.tntinfra.net/api/galaxy/content/rh-certified/
+
+  - name: ansible.controller
+    source: https://console.redhat.com/api/automation-hub/

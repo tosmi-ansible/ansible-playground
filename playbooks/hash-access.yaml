@@ -1,0 +1,16 @@
+- name: Play with convertion
+  hosts: localhost
+  gather_facts: no
+  vars:
+    database: "CCC"
+    database_config:
+      ccc:
+        table: "test"
+        user: "the user"
+
+  tasks:
+    - name: Test hash access
+      ansible.builtin.debug:
+        msg:
+          - "{{ database_config[database|lower].table }}"
+#          - "{{ database_config['ccc'].user }}"
