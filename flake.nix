@@ -23,9 +23,6 @@
 
             pkgs.ansible
             pkgs.ansible-lint
-            pkgs.ansible-navigator
-            pkgs.ansible-builder
-            pkgs.glibcLocales
             pkgs.yamllint
           ];
         };

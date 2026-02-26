@@ -1,0 +1,13 @@
+- name: Test splitting branch names from github webhooks
+  hosts: localhost
+  gather_facts: no
+  vars:
+    branch_name: "refs/heads/feature/some-feature-branch"
+  tasks:
+    - name: Remove refs/head from the branch name and convert slashes to dashes
+      set_fact:
+        split_branch_name: "{{ branch_name.split('/')[2:] | join('-') }}"
+
+    - name: Show split branch name
+      debug:
+        var: split_branch_name

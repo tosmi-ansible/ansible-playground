@@ -1,0 +1,37 @@
+- name: Play if object diff
+  hosts: localhost
+  gather_facts: false
+  vars:
+    controller_configuration_object_diff_secure_logging: false
+    orgs: tenant3
+    aap_organizations:
+      - name: Tenant-1
+        description: Organization for Tenant-1
+
+  pre_tasks:
+    - name: "Set the oauth token to be used since now"
+      ansible.builtin.set_fact:
+        aap_hostname: aap.apps.hub.aws.tntinfra.net
+        aap_oauthtoken: the token
+        aap_validate_certs: false
+
+    - debug: var=aap_hostname
+
+    - name: check version
+      ansible.builtin.set_fact:
+        aap_version: >-
+          {{
+          lookup(
+          'ansible.platform.gateway_api',
+          'api/gateway/v1/ping/',
+          host=aap_hostname,
+          oauth_token=aap_oauthtoken,
+          verify_ssl=aap_validate_certs
+          ).version
+          }}
+
+  roles:
+    - role: infra.aap_configuration_extended.object_diff
+      vars:
+        controller_configuration_object_diff_tasks:
+          - {name: controller_job_templates, var: controller_templates, tags: controller_job_templates}
