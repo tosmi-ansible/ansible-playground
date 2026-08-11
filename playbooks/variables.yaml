@@ -1,0 +1,10 @@
+- name: Play with variables
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - ansible.builtin.set_fact:
+        __var1: "__var1: value from set_fact"
+
+    - ansible.builting.debug:
+        msg: "__var1: {{ __var1 }}"
