@@ -3,6 +3,9 @@
   gather_facts: false
   tasks:
 
+    - name: Include sample variables
+      include_vars: ../vars/samples.yaml
+
     - ansible.builtin.set_fact:
         __var1: "__var1: value from set_fact"
 
