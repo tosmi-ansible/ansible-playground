@@ -1,0 +1,34 @@
+---
+- name: Test CasC
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - name: Set required variables for casc
+      ansible.builtin.set_fact:
+        __organization: Default
+        __aap_token: <token>
+        __controller_hostname: <hostname>
+        __validate_certs: false
+
+    - name: Create project
+      ansible.controller.project:
+        name: Playground
+        organization: "{{ __organization }}"
+        state: present
+        scm_url: https://github.com/tosmi-ansible/ansible-playground.git
+        scm_type: git
+        aap_token: "{{ __aap_token }}"
+        controller_host: "{{ __controller_hostname }}"
+        validate_certs: "{{ __validate_certs }}"
+
+    - name: Create a job template
+      ansible.controller.job_template:
+        name: Simple variable test
+        organization: "{{ __organization }}"
+        inventory: "Demo Inventory"
+        project: Playground
+        playbook: playbooks/variables.yaml
+        aap_token: "{{ __aap_token }}"
+        controller_host: "{{ __controller_hostname }}"
+        validate_certs: "{{ __validate_certs }}"
