@@ -1,0 +1,12 @@
+---
+credentials:
+  db1:
+    username: max
+    password: nothing
+jobs:
+  first:
+    path: ../files/first.sh
+    content: |
+      #!/bin/sh
+
+      echo "hello world"
