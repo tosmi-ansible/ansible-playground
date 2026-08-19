@@ -1,0 +1,6 @@
+---
+all:
+  vars:
+    controller_host: aap.apps.hub.aws.tntinfra.net
+    controller_username: admin
+    controller_password: <the password>
